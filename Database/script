@@ -1,0 +1,28 @@
+create schema cakestore;
+
+set search_path to cakestore;
+
+create table cake (
+    id serial primary key not null,
+    name varchar(90) NOT NULL,
+    price float NOT NULL
+);
+
+create table itemsale (
+    id serial primary key not null,
+    cake INT not null,
+    sale INT not null,
+    qtd INT not null,
+    price float not null,
+    foreign key (cake) references cake(id),
+    foreign key (sale) references sale(id)
+);
+
+create table sale (
+    id serial primary key,
+    qtd int NOT NULL,
+    price float NOT NULL,
+    client varchar(90)
+);
+
+
