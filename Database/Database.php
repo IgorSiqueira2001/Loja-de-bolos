@@ -71,8 +71,6 @@
             var_dump($sql);
             return $this->execute($sql);
         }
-
-        
     }
 
 ?>

@@ -32,7 +32,4 @@
             return (new Database('cake'))->delete('id=' . $this->id);
         }
     }
-
-    
-
 ?>
