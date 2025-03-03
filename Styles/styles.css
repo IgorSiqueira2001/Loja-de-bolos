@@ -9,21 +9,21 @@ body{
     gap: 8px;
 }
     
-.div5 {
+.div1 {
     grid-row: span 4 / span 4;
     grid-column-start: 2;
     background-color: #E6E6FA;
     border-radius: 10px;
 }
 
-.div6 {
+.div2 {
     grid-row: span 4 / span 4;
     grid-column-start: 3;
     background-color: #F5DEB3;
     border-radius: 10px;
 }
 
-.div7 {
+.div3 {
     grid-row: span 4 / span 4;
     grid-column-start: 4;
     background-color: #00CED1;
