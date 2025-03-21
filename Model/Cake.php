@@ -30,5 +30,11 @@
         public function exclude(){
             return (new Database('cake'))->delete('id=' . $this->id);
         }
+
+        public static function getCakes($where = null, $order = null, $limit = null){
+            return(new Database('cake'))->select($where, $order, $limit)
+                ->fetchAll(PDO::FETCH_CLASS, self::class);
+        }
+
     }
 ?>

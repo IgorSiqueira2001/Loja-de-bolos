@@ -8,7 +8,7 @@
         const HOST = "localhost";
         const NAME = "cakestore";
         const USER = "postgres";
-        const PASS = "";
+        const PASS = "03517";
 
         private $tabela;
         private $conexao;
@@ -44,7 +44,7 @@
             $sql = 'INSERT INTO '.$this->tabela.' ('.implode(',', $campos).') VALUES ('.implode(',', $binds).') RETURNING id';
             
             $stmt = $this->execute($sql, array_values($values));
-            return $stmt->fetchColumn(); // Retorna o ID gerado
+            return $stmt->fetchColumn();
         }        
 
         public function update($where,$values){

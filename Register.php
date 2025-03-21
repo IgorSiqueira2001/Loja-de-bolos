@@ -16,7 +16,6 @@
         $cake->name = $_POST["cake"];
         $cake->price = $_POST["cakePrice"];
         
-
        switch ($_POST["op"]){
             case "register":
                 $cake->create();
