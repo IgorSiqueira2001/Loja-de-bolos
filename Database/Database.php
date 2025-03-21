@@ -39,12 +39,13 @@
 
         public function insert($values){
             $campos = array_keys($values);
-            $binds  = array_pad([],count($campos),'?');
-
-            $sql = 'insert into '.$this->tabela.'('.implode(',',$campos).') values ('.implode(',',$binds).')'; 
-            $this->execute($sql,array_values($values));
-            return $this->conexao->lastInsertId();
-        }
+            $binds  = array_pad([], count($campos), '?');
+        
+            $sql = 'INSERT INTO '.$this->tabela.' ('.implode(',', $campos).') VALUES ('.implode(',', $binds).') RETURNING id';
+            
+            $stmt = $this->execute($sql, array_values($values));
+            return $stmt->fetchColumn(); // Retorna o ID gerado
+        }        
 
         public function update($where,$values){
             $campos = array_keys($values);

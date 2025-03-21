@@ -6,7 +6,7 @@
 
     class Cake {
 
-        public $id=0;
+        public $id;
         public $name;
         public $price;
 
@@ -14,7 +14,6 @@
         public function create(){
             $objDatabase = new Database('cake');
             $id = $objDatabase->insert([
-                'id' => $this->id,
                 'name' => $this->name,
                 'price' => $this->price
             ]);
