@@ -8,7 +8,7 @@
         const HOST = "localhost";
         const NAME = "cakestore";
         const USER = "postgres";
-        const PASS = "";
+        const PASS = "03517";
 
         private $tabela;
         private $conexao;
