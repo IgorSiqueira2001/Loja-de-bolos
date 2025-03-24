@@ -36,5 +36,10 @@
                 ->fetchAll(PDO::FETCH_CLASS, self::class);
         }
 
+        public static function getCakesByID($id){
+            return(new Database('cake'))->select('id=' . $id)
+                ->fetchObject(self::class);
+        }
+
     }
 ?>
