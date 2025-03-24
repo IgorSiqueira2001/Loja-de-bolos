@@ -13,7 +13,7 @@ Este é um sistema web para gerenciar uma loja de bolos, permitindo o cadastro, 
 ## 🛠️ Tecnologias Utilizadas
 - **PHP** (Back-end)
 - **HTML, CSS & JavaScript** (Front-end)
-- **MySQL** (Banco de Dados)
+- **PostgreSQL** (Banco de Dados)
 - **Bootstrap** (Estilização)
 
 ## 📂 Estrutura do Projeto
@@ -35,7 +35,7 @@ Este é um sistema web para gerenciar uma loja de bolos, permitindo o cadastro, 
 ### 1️⃣ Pré-requisitos:
 - Servidor local (XAMPP, WAMP, ou Docker)
 - PHP 7+ instalado
-- MySQL ou MariaDB
+- PostgreSQL ou MySQL
 
 ### 2️⃣ Instalação e Execução:
 1. Clone o repositório:
@@ -43,8 +43,8 @@ Este é um sistema web para gerenciar uma loja de bolos, permitindo o cadastro, 
    git clone https://github.com/seu-usuario/seu-repositorio.git
    ```
 2. Configure o banco de dados:
-   - Importe o arquivo `database.sql` no MySQL.
-   - Edite `Config.php` com suas credenciais do banco.
+   - Importe o arquivo `script.sql` no MySQL ou PostgreSQL.
+   - Edite `Database.php` com suas credenciais do banco.
 3. Inicie o servidor local:
    ```bash
    php -S localhost:8000
