@@ -18,5 +18,6 @@
             </div>
             <button class="btn btn-primary" type="submit" name="op" value="register" style="background-color: #FFA07A; border-radius: 5px; margin-left: 1rem;">Register</button>
             <button class="btn btn-primary" type="submit" name="op" value="edit" style="background-color: #FFA07A; border-radius: 5px; margin-left: 1rem;">Edit</button>
+            <button class="btn btn-primary" type="submit" name="op" value="exclude" style="background-color: #FFA07A; border-radius: 5px; margin-left: 1rem;">Exclude</button>
         </div>
     </div>

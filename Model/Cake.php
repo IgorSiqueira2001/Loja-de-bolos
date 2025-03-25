@@ -27,8 +27,8 @@
             ]);
         }
 
-        public function exclude(){
-            return (new Database('cake'))->delete('id=' . $this->id);
+        public function exclude($codigo){
+            return (new Database('cake'))->delete('id=' . $codigo);
         }
 
         public static function getCakes($where = null, $order = null, $limit = null){

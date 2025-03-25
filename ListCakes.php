@@ -67,6 +67,7 @@
             <p><strong>Nome:</strong> <?= $c->name ?></p>
             <p><strong>Preço:</strong> R$ <?= number_format($c->price, 2, ',', '.') ?></p>
             <a href="Register.php?op=1&id=<?= $c->id ?>" class="btn">Editar</a>
+            <a href="Register.php?op=2&id=<?= $c->id ?>" class="btn" style="margin-top: 6px">Excluir</a>
         </div>
     <?php endforeach; ?>
 </div>

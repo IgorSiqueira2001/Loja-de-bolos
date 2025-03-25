@@ -8,7 +8,7 @@
         const HOST = "localhost";
         const NAME = "cakestore";
         const USER = "postgres";
-        const PASS = "03517";
+        const PASS = "";
 
         private $tabela;
         private $conexao;
@@ -72,7 +72,8 @@
             $order = strlen($order) ?' where '.$order :'';
             $limit = strlen($limit) ?' where '.$limit :'';
 
-            $sql=trim("select * from ".$this->tabela.' '.$where.' '.$order.' '.$limit);
+            $sql=trim("select * from ".$this->tabela.' '.$where.' '."order by"." id".$limit);
+            var_dump($sql);
             return $this->execute($sql);
         }
     }

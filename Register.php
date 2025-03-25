@@ -29,7 +29,9 @@
                 $cake->alter($_POST['id']);
                 break;
             case "exclude":
-                $cake->exclude();
+                $cake->exclude($_POST['id']);
+                $cake->name = "";
+                $cake->price = "";
                 break;
             default:
        }
