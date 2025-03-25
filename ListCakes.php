@@ -36,7 +36,7 @@
     }
 
     .card {
-        margin-top: 4rem;
+        margin-top: 5rem;
         background-color: white;
         padding: 15px;
         border-radius: 10px;

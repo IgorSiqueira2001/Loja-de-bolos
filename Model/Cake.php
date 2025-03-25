@@ -19,9 +19,9 @@
             ]);
         }
 
-        public function alter(){
-           return (new Database('cake'))->update('id=' . $this->id, [
-                'id' => $this->id,
+        public function alter($codigo){
+           echo('esse é o ID' . $codigo);
+           return (new Database('cake'))->update('id=' . $codigo, [
                 'name' => $this->name,
                 'price' => $this->price
             ]);

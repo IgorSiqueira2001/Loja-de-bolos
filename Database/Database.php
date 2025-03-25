@@ -8,7 +8,7 @@
         const HOST = "localhost";
         const NAME = "cakestore";
         const USER = "postgres";
-        const PASS = "";
+        const PASS = "03517";
 
         private $tabela;
         private $conexao;
@@ -47,12 +47,16 @@
             return $stmt->fetchColumn();
         }        
 
-        public function update($where,$values){
+        public function update($where, $values) {
             $campos = array_keys($values);
-            $binds  = array_pad([],count($campos),'?');
-            $sql = 'update '.$this->tabela.' set '.implode('=?,',$campos).'=? where '.$where;
+            if (empty($where)) {
+                throw new Exception("O parâmetro WHERE não pode ser vazio!");
+            }
+            $binds  = array_map(fn($k) => "$k=?", $campos);
+            $sql = 'UPDATE '.$this->tabela.' SET '.implode(', ', $binds).' WHERE '.$where;
             var_dump($sql);
-            $this->execute($sql,array_values($values));
+            $this->execute($sql, array_values($values));
+            
             return true;
         }
 
@@ -69,7 +73,6 @@
             $limit = strlen($limit) ?' where '.$limit :'';
 
             $sql=trim("select * from ".$this->tabela.' '.$where.' '.$order.' '.$limit);
-            var_dump($sql);
             return $this->execute($sql);
         }
     }
